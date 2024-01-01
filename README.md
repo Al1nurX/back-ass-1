@@ -8,17 +8,18 @@ project-folder
 
 ├── routes
 
-│ └── bmiRoutes.js
+│   └── bmiRoutes.js
 
 ├── public
 
-│ └── bmiCalculator.html
+│   └── bmiCalculator.html
 
 ├── node_modules
 
 ├── package.json
 
 └── root.js
+
 
 ## Installation
 
