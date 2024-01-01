@@ -63,3 +63,7 @@ Visit `http://localhost:3000` in your web browser to access the BMI calculator.
 - Implements a /bmicalculator route for handling both GET and POST requests.
 - BMI calculation logic is implemented in the core JavaScript file.
 - Returns the BMI result along with appropriate messages.
+
+## Author
+
+- [@Al1nurX](https://www.github.com/Al1nurX)
