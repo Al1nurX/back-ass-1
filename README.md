@@ -22,10 +22,12 @@ project-folder
    git clone <repository-url>
 
 2. Navigate to the project folder:
+
    ```bash
    cd ass-1
 
-3. Install dependencies:
+4. Install dependencies:
+   
    ```bash
    npm install
 
@@ -33,7 +35,7 @@ project-folder
 
 Ensure that the server runs on port 3000:
 
-   ```bash
+   ``bash
    npm start
 
 Visit `http://localhost:3000` in your web browser to access the BMI calculator.
@@ -54,4 +56,3 @@ Visit `http://localhost:3000` in your web browser to access the BMI calculator.
 - Implements a /bmicalculator route for handling both GET and POST requests.
 - BMI calculation logic is implemented in the core JavaScript file.
 - Returns the BMI result along with appropriate messages.
-
