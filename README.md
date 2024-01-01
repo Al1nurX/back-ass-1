@@ -35,8 +35,9 @@ project-folder
 
 Ensure that the server runs on port 3000:
 
-   ``bash
+   ```bash
    npm start
+   ```
 
 Visit `http://localhost:3000` in your web browser to access the BMI calculator.
 
