@@ -13,10 +13,6 @@ project-folder
 
 │ └── bmiCalculator.html
 
-├── views
-
-│ └── bmiCalculator.html
-
 ├── node_modules
 
 ├── package.json
