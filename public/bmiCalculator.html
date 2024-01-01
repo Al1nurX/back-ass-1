@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">BMI Calculator</a>
+  </nav>
+
+  <div class="container mt-4">
+    <form id="bmiForm">
+      <div class="form-group">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" class="form-control" id="weight" name="weight" required>
+      </div>
+      <div class="form-group">
+        <label for="height">Height (m):</label>
+        <input type="number" class="form-control" id="height" name="height" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select class="form-control" id="gender" name="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="calculateBMI()">Calculate BMI</button>
+    </form>
+
+    <div id="bmiResult" class="mt-4"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+    function calculateBMI() {
+      const weight = document.getElementById('weight').value;
+      const height = document.getElementById('height').value;
+      const gender = document.getElementById('gender').value;
+
+      if (weight === '' || height === '') {
+        alert('Please enter weight and height.');
+        return;
+      }
+
+      fetch('/bmi/bmicalculator', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: {
+          weight: weight,
+          height: height,
+          gender: gender
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('bmiResult').innerHTML = `
+            <p><strong>BMI:</strong> ${data.bmi}</p>
+            <p><strong>BMI Prime:</strong> ${data.bmiPrime}</p>
+            <p><strong>Result:</strong> ${data.result}</p>
+        `;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+  </script>
+
+</body>
+
+</html>
