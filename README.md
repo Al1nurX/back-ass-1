@@ -4,14 +4,23 @@
 
 project-folder
 │
+
 ├── routes
+
 │ └── bmiRoutes.js
+
 ├── public
+
 │ └── bmiCalculator.html
+
 ├── views
+
 │ └── bmiCalculator.html
+
 ├── node_modules
+
 ├── package.json
+
 └── root.js
 
 ## Installation
