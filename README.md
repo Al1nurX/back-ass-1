@@ -23,15 +23,20 @@ project-folder
 
 ## Installation
 
-1. Clone the repository:
+1. Navigate to the desktop:
+
+   ```bash
+   cd desktop
+
+2. Clone the repository:
 
    ```bash
    git clone https://github.com/Al1nurX/back-ass-1.git
 
-2. Navigate to the project folder:
+3. Navigate to the project folder:
 
    ```bash
-   cd ass-1
+   cd back-ass-1
 
 4. Install dependencies:
    
