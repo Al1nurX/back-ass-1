@@ -7,10 +7,12 @@ router.route('/bmicalculator')
     })
     .post((req, res) => {
         const weight = parseFloat(req.body.weight);
-        const height = parseFloat(req.body.height);
+        const heightInCentimeters = parseFloat(req.body.height);
         const gender = req.body.gender;
+
+        const heightInMeters = heightInCentimeters / 100;
         
-        const bmi = weight / Math.pow(height, 2);
+        const bmi = weight / (heightInMeters * heightInMeters);
         const bmiPrime = bmi / 25;
 
         let resultMessage;
