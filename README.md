@@ -62,7 +62,7 @@ Visit `http://localhost:3000` in your web browser to access the BMI calculator.
 
 ### Express Server (root.js)
 - Uses Express.js for handling the server.
-- IThe server runs on port 3000.
+- The server runs on port 3000.
 - Optionally, routes are organized by separating them into a separate file (e.g., routes/bmiRoutes.js).
 
 ### BMI Calculation Logic (routes/bmiRoutes.js)
